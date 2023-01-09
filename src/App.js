@@ -1,8 +1,9 @@
-import logo from "./logo.svg";
-import "./App.css";
-
 function App() {
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <div>yo</div>
+    </div>
+  );
 }
 
 export default App;
