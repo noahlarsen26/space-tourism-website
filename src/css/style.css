@@ -1,3 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap");
+nav {
+  margin-top: 40px;
+  position: relative;
+  position: absolute;
+  right: 0;
+  height: 96px;
+  width: 1385px;
+  display: flex;
+  justify-content: flex-end;
+}
+nav .logo {
+  position: absolute;
+  top: 25%;
+  left: 0;
+}
+nav .underline {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  width: 473px;
+  background: #ffffff;
+  height: 1px;
+  z-index: 3;
+  opacity: 0.5;
+}
+nav .navbar-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 830px;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(40.7742px);
+}
+nav .navbar-container .navbar {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  height: 100%;
+  width: 100%;
+  text-transform: uppercase;
+}
+nav .navbar-container .navbar li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  cursor: pointer;
+}
+nav .navbar-container .navbar li .hover {
+  position: absolute;
+  top: 100%;
+  height: 3px;
+  width: 100%;
+  display: inline-block;
+  background: #ffffff;
+  opacity: 0.5;
+}
+nav .navbar-container .navbar li .active {
+  position: absolute;
+  top: 100%;
+  height: 3px;
+  width: 100%;
+  display: inline-block;
+  background: #ffffff;
+}
+nav .navbar-container .navbar li span {
+  font-weight: 700;
+}
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1rem;
+  color: #ffffff;
+  letter-spacing: 3px;
+  background: url("/src/assets/home/background-home-desktop.jpg"), center/cover no-repeat;
+}
 
 /*# sourceMappingURL=style.css.map */

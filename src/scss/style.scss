@@ -1,0 +1,16 @@
+@use "layout/navigation";
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1rem;
+  color: #ffffff;
+  letter-spacing: 3px;
+  background: url("/src/assets/home/background-home-desktop.jpg"),
+    center/cover no-repeat;
+}
