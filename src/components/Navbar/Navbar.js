@@ -1,16 +1,6 @@
-import { useRef, useEffect } from "react";
-import Nav from "./Nav";
+import { Link, useMatch, useResolvedPath } from "react-router-dom";
 
 function Navbar() {
-  const homeUnderlineRef = useRef();
-  const destinationUnderlineRef = useRef();
-  const crewUnderlineRef = useRef();
-  const technologyUnderlineRef = useRef();
-
-  useEffect(() => {
-    homeUnderlineRef.current.classList.add("active");
-  });
-
   return (
     <nav>
       <svg
@@ -30,18 +20,18 @@ function Navbar() {
       <div className="underline"></div>
       <div className="navbar-container">
         <ul className="navbar">
-          <Nav ref={homeUnderlineRef} number={"00"} title={"home"} />
-          <Nav
-            ref={destinationUnderlineRef}
-            number={"01"}
-            title={"destination"}
-          />
-          <Nav ref={crewUnderlineRef} number={"02"} title={"crew"} />
-          <Nav
-            ref={technologyUnderlineRef}
-            number={"03"}
-            title={"technology"}
-          />
+          <CustomLink title={"Home"} number={"00"} to="/">
+            00 Home
+          </CustomLink>
+          <CustomLink title={"Destination"} number={"01"} to="/Destination">
+            01 Destination
+          </CustomLink>
+          <CustomLink title={"Crew"} number={"02"} to="/Crew">
+            02 Crew
+          </CustomLink>
+          <CustomLink title={"Technology"} number={"03"} to="/Technology">
+            03 Technology
+          </CustomLink>
           <div></div>
         </ul>
       </div>
@@ -50,3 +40,16 @@ function Navbar() {
 }
 
 export default Navbar;
+
+function CustomLink({ to, ...props }) {
+  const resolvePath = useResolvedPath(to);
+  const isActive = useMatch({ path: resolvePath.pathname, end: true });
+  return (
+    <li>
+      <Link to={to}>
+        <span>{props.number}</span> {props.title}
+      </Link>
+      <div className={isActive ? "active" : ""}></div>
+    </li>
+  );
+}

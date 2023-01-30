@@ -43,6 +43,10 @@ nav {
         align-items: center;
         height: 100%;
         cursor: pointer;
+        a {
+          color: #ffffff;
+          text-decoration: none;
+        }
         .hover {
           position: absolute;
           top: 100%;

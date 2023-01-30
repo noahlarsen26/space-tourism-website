@@ -48,6 +48,10 @@ nav .navbar-container .navbar li {
   height: 100%;
   cursor: pointer;
 }
+nav .navbar-container .navbar li a {
+  color: #ffffff;
+  text-decoration: none;
+}
 nav .navbar-container .navbar li .hover {
   position: absolute;
   top: 100%;
