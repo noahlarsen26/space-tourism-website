@@ -47,15 +47,6 @@ nav {
           color: #ffffff;
           text-decoration: none;
         }
-        .hover {
-          position: absolute;
-          top: 100%;
-          height: 3px;
-          width: 100%;
-          display: inline-block;
-          background: #ffffff;
-          opacity: 0.5;
-        }
         .active {
           position: absolute;
           top: 100%;
@@ -67,6 +58,15 @@ nav {
         span {
           font-weight: 700;
         }
+      }
+      li:hover > #nav-underline {
+        position: absolute;
+        top: 100%;
+        height: 3px;
+        width: 100%;
+        display: inline-block;
+        background: #ffffff;
+        opacity: 0.5;
       }
     }
   }

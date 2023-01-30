@@ -1,5 +1,4 @@
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
-
 function Navbar() {
   return (
     <nav>
@@ -49,7 +48,7 @@ function CustomLink({ to, ...props }) {
       <Link to={to}>
         <span>{props.number}</span> {props.title}
       </Link>
-      <div className={isActive ? "active" : ""}></div>
+      <div id="nav-underline" className={isActive ? "active" : ""}></div>
     </li>
   );
 }
