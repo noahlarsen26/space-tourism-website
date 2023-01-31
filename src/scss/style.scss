@@ -1,5 +1,6 @@
 @use "layout";
-@use "abstracts";
+@use "abstracts" as *;
+@use "pages";
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
 
@@ -9,9 +10,9 @@
   padding: 0;
 }
 body {
-  font-family: "Barlow Condensed", sans-serif;
+  font-family: $main-font;
   font-size: 1rem;
-  color: #ffffff;
+  color: $light-color;
   letter-spacing: 3px;
   background: url("/src/assets/home/background-home-desktop.jpg"),
     center/cover no-repeat;

@@ -1,3 +1,4 @@
+@use "../abstracts" as *;
 nav {
   margin-top: 40px;
   position: relative;
@@ -18,7 +19,7 @@ nav {
     left: 25%;
     transform: translate(-50%, -50%);
     width: 473px;
-    background: #ffffff;
+    background: $light-color;
     height: 1px;
     z-index: 3;
     opacity: 0.5;
@@ -44,7 +45,7 @@ nav {
         height: 100%;
         cursor: pointer;
         a {
-          color: #ffffff;
+          color: $light-color;
           text-decoration: none;
         }
         .active {
@@ -53,7 +54,7 @@ nav {
           height: 3px;
           width: 100%;
           display: inline-block;
-          background: #ffffff;
+          background: $light-color;
         }
         span {
           font-weight: 700;
@@ -65,7 +66,7 @@ nav {
         height: 3px;
         width: 100%;
         display: inline-block;
-        background: #ffffff;
+        background: $light-color;
         opacity: 0.5;
       }
     }

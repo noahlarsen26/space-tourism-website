@@ -1,0 +1,77 @@
+@use "../abstracts" as *;
+
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 450px;
+  width: 1160px;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-45%, -50%);
+  article {
+    height: 382px;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    h3 {
+      font-size: $small-heading-size;
+      text-transform: uppercase;
+      color: $light-blue;
+    }
+    h2 {
+      font-family: $secondary-font;
+      font-size: $big-heading-size;
+      text-transform: uppercase;
+    }
+    p {
+      font-size: $body-size;
+      color: $light-blue;
+    }
+  }
+  .circle-container {
+    width: 450px;
+    height: 100%;
+    position: relative;
+    .circle + div {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      background: black;
+      width: 100%;
+      border-radius: 50%;
+      opacity: 0.3;
+      display: none;
+    }
+    .circle:hover + div {
+      display: block;
+    }
+    .circle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 274px;
+      width: 274px;
+      border: none;
+      background: $light-color;
+      border-radius: 50%;
+      position: relative;
+      cursor: pointer;
+      z-index: 3;
+      h5 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: $moderate-heading-size;
+        font-family: $secondary-font;
+        text-transform: uppercase;
+        color: black;
+      }
+    }
+  }
+}

@@ -74,6 +74,82 @@ nav .navbar-container .navbar li:hover > #nav-underline {
   opacity: 0.5;
 }
 
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 450px;
+  width: 1160px;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-45%, -50%);
+}
+.hero-container article {
+  height: 382px;
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.hero-container article h3 {
+  font-size: 28px;
+  text-transform: uppercase;
+  color: #d0d6f9;
+}
+.hero-container article h2 {
+  font-family: "Bellefair", serif;
+  font-size: 150px;
+  text-transform: uppercase;
+}
+.hero-container article p {
+  font-size: 18px;
+  color: #d0d6f9;
+}
+.hero-container .circle-container {
+  width: 450px;
+  height: 100%;
+  position: relative;
+}
+.hero-container .circle-container .circle + div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: black;
+  width: 100%;
+  border-radius: 50%;
+  opacity: 0.3;
+  display: none;
+}
+.hero-container .circle-container .circle:hover + div {
+  display: block;
+}
+.hero-container .circle-container .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 274px;
+  width: 274px;
+  border: none;
+  background: #ffffff;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  z-index: 3;
+}
+.hero-container .circle-container .circle h5 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 32px;
+  font-family: "Bellefair", serif;
+  text-transform: uppercase;
+  color: black;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
