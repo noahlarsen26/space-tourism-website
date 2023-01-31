@@ -74,6 +74,11 @@ nav .navbar-container .navbar li:hover > #nav-underline {
   opacity: 0.5;
 }
 
+.bg-1 {
+  height: 100vh;
+  background: url("/src/assets/home/background-home-desktop.jpg"), center/cover no-repeat;
+}
+
 .hero-container {
   display: flex;
   justify-content: space-between;
@@ -161,7 +166,6 @@ body {
   font-size: 1rem;
   color: #ffffff;
   letter-spacing: 3px;
-  background: url("/src/assets/home/background-home-desktop.jpg"), center/cover no-repeat;
 }
 
 /*# sourceMappingURL=style.css.map */
