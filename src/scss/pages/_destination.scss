@@ -1,0 +1,97 @@
+@use "../abstracts" as *;
+
+.bg-2 {
+  height: 100vh;
+  background: url("/src/assets/destination/background-destination-desktop.jpg"),
+    center/cover no-repeat;
+  .main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    height: 550px;
+    width: 1300px;
+    // border: solid 1px blue;
+    .pick-destination {
+      height: 34px;
+      // width: 382px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      text-transform: uppercase;
+      // border: solid 1px red;
+      span {
+        color: gray;
+        padding-right: 4rem;
+      }
+    }
+    .destination-container {
+      display: flex;
+      justify-content: space-between;
+      height: 472px;
+      // border: solid 1px blue;
+      .planet-container {
+        height: calc(100% - 34px);
+        img {
+          height: 100%;
+        }
+      }
+    }
+    .planet-desc-container {
+      position: relative;
+      width: 50%;
+      ul {
+        display: flex;
+        list-style-type: none;
+        width: 285.5px;
+        height: 34px;
+        justify-content: space-between;
+        button {
+          background: none;
+          text-transform: uppercase;
+          font-size: $sub-heading3-size;
+          color: $light-color;
+          font-family: $main-font;
+          border: none;
+          cursor: pointer;
+        }
+      }
+      .line-container {
+        height: 1px;
+        div {
+          height: inherit;
+          background: $light-color;
+          opacity: 0.5;
+        }
+      }
+      .planet-name {
+        height: 160px;
+        font-size: $med-heading-size;
+        font-family: $secondary-font;
+        text-transform: uppercase;
+      }
+      .planet-description {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        color: $light-blue;
+      }
+      .facts-container {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        gap: 7rem;
+        height: 61px;
+        padding-top: 1.5rem;
+        h3 {
+          color: $light-blue;
+          text-transform: uppercase;
+          font-size: $sub-heading2-size;
+        }
+      }
+    }
+  }
+}
