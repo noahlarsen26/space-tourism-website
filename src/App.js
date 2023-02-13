@@ -1,9 +1,9 @@
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/pages/Home";
-import Crew from "./components/pages/Crew";
-import Technology from "./components/pages/Technology";
+import Crew from "./components/pages/crew/Crew";
+import Technology from "./components/pages/technology/Technology";
 import { Route, Routes } from "react-router-dom";
-import Destination from "./components/pages/Destination";
+import Destination from "./components/pages/destination/Destination";
 
 function App() {
   return (
