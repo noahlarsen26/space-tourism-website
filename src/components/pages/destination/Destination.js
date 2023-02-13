@@ -1,5 +1,5 @@
 import data from "../../../data.json";
-import Planet from "../planets/Planet";
+import Planet from "./planets/Planet";
 import moonImg from "../../../assets/destination/image-moon.png";
 import marsImg from "../../../assets/destination/image-mars.png";
 import europaImg from "../../../assets/destination/image-europa.png";

@@ -1,7 +1,7 @@
-import PlanetHeading from "../destination/planetData/PlanetHeading";
-import PlanetTime from "../destination/planetData/PlanetTime";
-import PlanetDistance from "../destination/planetData/PlanetDistance";
-import PlanetDescription from "../destination/planetData/PlanetDescription";
+import PlanetHeading from "../planetData/PlanetHeading";
+import PlanetTime from "../planetData/PlanetTime";
+import PlanetDistance from "../planetData/PlanetDistance";
+import PlanetDescription from "../planetData/PlanetDescription";
 
 function Planet(props) {
   return (
