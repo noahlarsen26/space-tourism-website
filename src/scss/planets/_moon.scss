@@ -1,0 +1,102 @@
+@use "../abstracts" as *;
+
+// .destination-container {
+//   display: flex;
+//   justify-content: space-between;
+//   height: 472px;
+//   // width: 100%;
+//   border: solid 1px blue;
+//   .planet-desc-container {
+//     // position: relative;
+//     display: flex;
+//     justify-content: space-around;
+//     border: solid 1px red;
+//     width: 100%;
+//     .planet-container {
+//       height: calc(100% - 34px);
+//       img {
+//         height: 100%;
+//       }
+//     }
+//     .planets-container {
+//       width: 500px;
+//       // border: solid 1px blue;
+//     }
+//     ul {
+//       display: flex;
+//       list-style-type: none;
+//       width: 285.5px;
+//       height: 34px;
+//       justify-content: space-between;
+//       position: relative;
+//       button {
+//         background: none;
+//         text-transform: uppercase;
+//         font-size: $sub-heading3-size;
+//         color: $light-blue;
+//         font-family: $main-font;
+//         border: none;
+//         cursor: pointer;
+//       }
+//       li {
+//         position: relative;
+//         // border: solid 1px red;
+//         height: 90%;
+//         .active {
+//           position: absolute;
+//           top: 100%;
+//           right: 0;
+//           height: 3px;
+//           width: 100%;
+//           display: inline-block;
+//           background: $light-color;
+//         }
+//       }
+//       li:has(.active) {
+//         color: $light-color;
+//       }
+//       a {
+//         // background: none;
+//         text-transform: uppercase;
+//         font-size: $sub-heading3-size;
+//         color: $light-color;
+//         font-family: $main-font;
+//         // border: none;
+//         cursor: pointer;
+//         text-decoration: none;
+//       }
+//     }
+//     .line-container {
+//       height: 1px;
+//       div {
+//         height: inherit;
+//         background: $light-color;
+//         opacity: 0.5;
+//       }
+//     }
+//     .planet-name {
+//       height: 160px;
+//       font-size: $med-heading-size;
+//       font-family: $secondary-font;
+//       text-transform: uppercase;
+//     }
+//     .planet-description {
+//       padding-top: 2rem;
+//       padding-bottom: 2rem;
+//       color: $light-blue;
+//     }
+//     .facts-container {
+//       position: absolute;
+//       display: flex;
+//       align-items: center;
+//       gap: 7rem;
+//       height: 61px;
+//       padding-top: 1.5rem;
+//       h3 {
+//         color: $light-blue;
+//         text-transform: uppercase;
+//         font-size: $sub-heading2-size;
+//       }
+//     }
+//   }
+// }

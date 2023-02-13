@@ -19,18 +19,10 @@ function Navbar() {
       <div className="underline"></div>
       <div className="navbar-container">
         <ul className="navbar">
-          <CustomLink title={"Home"} number={"00"} to="/">
-            00 Home
-          </CustomLink>
-          <CustomLink title={"Destination"} number={"01"} to="/Destination">
-            01 Destination
-          </CustomLink>
-          <CustomLink title={"Crew"} number={"02"} to="/Crew">
-            02 Crew
-          </CustomLink>
-          <CustomLink title={"Technology"} number={"03"} to="/Technology">
-            03 Technology
-          </CustomLink>
+          <CustomLink title={"Home"} number={"00"} to="/" />
+          <CustomLink title={"Destination"} number={"01"} to="Destination" />
+          <CustomLink title={"Crew"} number={"02"} to="/Crew" />
+          <CustomLink title={"Technology"} number={"03"} to="/Technology" />
           <div></div>
         </ul>
       </div>

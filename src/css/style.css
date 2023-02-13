@@ -186,53 +186,75 @@ nav .navbar-container .navbar li:hover > #nav-underline {
   display: flex;
   justify-content: space-between;
   height: 472px;
+  width: 100%;
 }
-.bg-2 .main-container .destination-container .planet-container {
+.bg-2 .main-container .destination-container .planet-desc-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.bg-2 .main-container .destination-container .planet-desc-container .planet-container {
   height: calc(100% - 34px);
 }
-.bg-2 .main-container .destination-container .planet-container img {
+.bg-2 .main-container .destination-container .planet-desc-container .planet-container img {
   height: 100%;
 }
-.bg-2 .main-container .planet-desc-container {
-  position: relative;
-  width: 50%;
+.bg-2 .main-container .destination-container .planet-desc-container .planet-info {
+  width: 500px;
 }
-.bg-2 .main-container .planet-desc-container ul {
+.bg-2 .main-container .destination-container .planet-desc-container .planet-info ul {
   display: flex;
   list-style-type: none;
   width: 285.5px;
   height: 34px;
   justify-content: space-between;
+  position: relative;
 }
-.bg-2 .main-container .planet-desc-container ul button {
+.bg-2 .main-container .destination-container .planet-desc-container .planet-info ul button {
   background: none;
   text-transform: uppercase;
   font-size: 16px;
-  color: #ffffff;
+  color: #d0d6f9;
   font-family: "Barlow Condensed", sans-serif;
   border: none;
   cursor: pointer;
 }
-.bg-2 .main-container .planet-desc-container .line-container {
+.bg-2 .main-container .destination-container .planet-desc-container .planet-info ul li {
+  position: relative;
+  height: 90%;
+}
+.bg-2 .main-container .destination-container .planet-desc-container .planet-info ul li .active {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  height: 3px;
+  width: 100%;
+  display: inline-block;
+  background: #ffffff;
+}
+.bg-2 .main-container .destination-container .planet-desc-container .planet-info ul li:has(.active) {
+  color: #ffffff;
+}
+.bg-2 .main-container .destination-container .planet-desc-container .line-container {
   height: 1px;
 }
-.bg-2 .main-container .planet-desc-container .line-container div {
+.bg-2 .main-container .destination-container .planet-desc-container .line-container div {
   height: inherit;
   background: #ffffff;
   opacity: 0.5;
 }
-.bg-2 .main-container .planet-desc-container .planet-name {
+.bg-2 .main-container .destination-container .planet-desc-container .planet-name {
   height: 160px;
   font-size: 100px;
   font-family: "Bellefair", serif;
   text-transform: uppercase;
 }
-.bg-2 .main-container .planet-desc-container .planet-description {
+.bg-2 .main-container .destination-container .planet-desc-container .planet-description {
   padding-top: 2rem;
   padding-bottom: 2rem;
   color: #d0d6f9;
 }
-.bg-2 .main-container .planet-desc-container .facts-container {
+.bg-2 .main-container .destination-container .planet-desc-container .facts-container {
   position: absolute;
   display: flex;
   align-items: center;
@@ -240,7 +262,7 @@ nav .navbar-container .navbar li:hover > #nav-underline {
   height: 61px;
   padding-top: 1.5rem;
 }
-.bg-2 .main-container .planet-desc-container .facts-container h3 {
+.bg-2 .main-container .destination-container .planet-desc-container .facts-container h3 {
   color: #d0d6f9;
   text-transform: uppercase;
   font-size: 14px;

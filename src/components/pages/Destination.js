@@ -1,6 +1,53 @@
-import moon from "../../assets/destination/image-moon.png";
+import data from "../../data.json";
+import Planet from "./planets/Planet";
+import moonImg from "../../assets/destination/image-moon.png";
+import marsImg from "../../assets/destination/image-mars.png";
+import europaImg from "../../assets/destination/image-europa.png";
+import titanImg from "../../assets/destination/image-titan.png";
+import { useState, useRef } from "react";
 
 function Destination() {
+  const [planet, setPlanet] = useState(0);
+  const imgRef = useRef();
+
+  const [moonActive, moonIsActive] = useState(true);
+  const [marsActive, marsIsActive] = useState(false);
+  const [europaActive, europaIsActive] = useState(false);
+  const [titanActive, titanIsActive] = useState(false);
+
+  function setMoonHandler() {
+    setPlanet(0);
+    moonIsActive(true);
+    marsIsActive(false);
+    europaIsActive(false);
+    titanIsActive(false);
+    imgRef.current.src = moonImg;
+  }
+  function setMarsHandler() {
+    setPlanet(1);
+    marsIsActive(true);
+    moonIsActive(false);
+    europaIsActive(false);
+    titanIsActive(false);
+    imgRef.current.src = marsImg;
+  }
+  function setEuropaHandler() {
+    setPlanet(2);
+    europaIsActive(true);
+    moonIsActive(false);
+    marsIsActive(false);
+    titanIsActive(false);
+    imgRef.current.src = europaImg;
+  }
+  function setTitanHandler() {
+    setPlanet(3);
+    titanIsActive(true);
+    moonIsActive(false);
+    marsIsActive(false);
+    europaIsActive(false);
+    imgRef.current.src = titanImg;
+  }
+
   return (
     <div className="bg-2">
       <div className="main-container">
@@ -10,47 +57,40 @@ function Destination() {
           </h1>
         </div>
         <div className="destination-container">
-          <div className="planet-container">
-            <img className="planet" src={moon} alt="moon-picture" />
-          </div>
           <div className="planet-desc-container">
-            <ul>
-              <li>
-                <button>moon</button>
-              </li>
-              <li>
-                <button>mars</button>
-              </li>
-              <li>
-                <button>europa</button>
-              </li>
-              <li>
-                <button>titan</button>
-              </li>
-            </ul>
-            <div className="planet-name">
-              <h2>moon</h2>
+            <div className="planet-container">
+              <img
+                className="planet"
+                ref={imgRef}
+                src={moonImg}
+                alt="planet-picture"
+              />
             </div>
-            <div className="planet-description">
-              <p>
-                See our planet as you’ve never seen it before. A perfect
-                relaxing trip away to help regain perspective and come back
-                refreshed. While you’re there, take in some history by visiting
-                the Luna 2 and Apollo 11 landing sites.
-              </p>
-            </div>
-            <div className="line-container">
-              <div></div>
-            </div>
-            <div className="facts-container">
-              <div className="distance-container">
-                <h3>avg. distance</h3>
-                <h4>384,400 km</h4>
-              </div>
-              <div className="travel-time-container">
-                <h3>est. travel time</h3>
-                <h4>3 days</h4>
-              </div>
+            <div className="planet-info">
+              <ul>
+                <li onClick={setMoonHandler}>
+                  <button>moon</button>
+                  {moonActive && <div className="active"></div>}
+                </li>
+                <li onClick={setMarsHandler}>
+                  <button>mars</button>
+                  {marsActive && <div className="active"></div>}
+                </li>
+                <li onClick={setEuropaHandler}>
+                  <button>europa</button>
+                  {europaActive && <div className="active"></div>}
+                </li>
+                <li onClick={setTitanHandler}>
+                  <button>titan</button>
+                  {titanActive && <div div className="active"></div>}
+                </li>
+              </ul>
+              <Planet
+                name={data.destinations[planet].name}
+                description={data.destinations[planet].description}
+                distance={data.destinations[planet].distance}
+                travel={data.destinations[planet].distance}
+              />
             </div>
           </div>
         </div>
