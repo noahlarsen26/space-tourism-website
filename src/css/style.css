@@ -218,6 +218,7 @@ nav .navbar-container .navbar li:hover > #nav-underline {
   font-family: "Barlow Condensed", sans-serif;
   border: none;
   cursor: pointer;
+  letter-spacing: 3px;
 }
 .bg-2 .main-container .destination-container .planet-desc-container .planet-info ul li {
   position: relative;
@@ -232,8 +233,18 @@ nav .navbar-container .navbar li:hover > #nav-underline {
   display: inline-block;
   background: #ffffff;
 }
-.bg-2 .main-container .destination-container .planet-desc-container .planet-info ul li:has(.active) {
+.bg-2 .main-container .destination-container .planet-desc-container .planet-info ul button:has(+ .active) {
   color: #ffffff;
+}
+.bg-2 .main-container .destination-container .planet-desc-container .planet-info ul li:hover > #planet-underline {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  display: inline-block;
+  background: #ffffff;
+  opacity: 0.5;
 }
 .bg-2 .main-container .destination-container .planet-desc-container .line-container {
   height: 1px;

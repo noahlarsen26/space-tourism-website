@@ -58,6 +58,7 @@
               font-family: $main-font;
               border: none;
               cursor: pointer;
+              letter-spacing: 3px;
             }
             li {
               position: relative;
@@ -72,8 +73,18 @@
                 background: $light-color;
               }
             }
-            li:has(.active) {
+            button:has(+ .active) {
               color: $light-color;
+            }
+            li:hover > #planet-underline {
+              position: absolute;
+              top: 100%;
+              left: 0;
+              height: 3px;
+              width: 100%;
+              display: inline-block;
+              background: $light-color;
+              opacity: 0.5;
             }
           }
         }

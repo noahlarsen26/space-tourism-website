@@ -70,19 +70,31 @@ function Destination() {
               <ul>
                 <li onClick={setMoonHandler}>
                   <button>moon</button>
-                  {moonActive && <div className="active"></div>}
+                  <div
+                    id="planet-underline"
+                    className={moonActive ? "active" : ""}
+                  ></div>
                 </li>
                 <li onClick={setMarsHandler}>
                   <button>mars</button>
-                  {marsActive && <div className="active"></div>}
+                  <div
+                    id="planet-underline"
+                    className={marsActive ? "active" : ""}
+                  ></div>
                 </li>
                 <li onClick={setEuropaHandler}>
                   <button>europa</button>
-                  {europaActive && <div className="active"></div>}
+                  <div
+                    id="planet-underline"
+                    className={europaActive ? "active" : ""}
+                  ></div>
                 </li>
                 <li onClick={setTitanHandler}>
                   <button>titan</button>
-                  {titanActive && <div div className="active"></div>}
+                  <div
+                    id="planet-underline"
+                    className={titanActive ? "active" : ""}
+                  ></div>
                 </li>
               </ul>
               <Planet
