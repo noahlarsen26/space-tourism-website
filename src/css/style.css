@@ -155,6 +155,81 @@ nav .navbar-container .navbar li:hover > #nav-underline {
   color: black;
 }
 
+.bg-3 {
+  height: 100vh;
+  background-image: url("/src/assets/crew/background-crew-desktop.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg-3 .crew {
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  height: 550px;
+  width: 1200px;
+  text-transform: uppercase;
+}
+.bg-3 .crew .heading-container {
+  height: 34px;
+  width: 50%;
+}
+.bg-3 .crew .heading-container span {
+  color: gray;
+  padding-right: 4rem;
+}
+.bg-3 .crew .crew-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: calc(100% - 39px);
+}
+.bg-3 .crew .crew-container .crew-member-info {
+  width: 50%;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+.bg-3 .crew .crew-container .crew-member-info h3 {
+  font-size: 32px;
+  color: gray;
+  font-family: "Bellefair", serif;
+}
+.bg-3 .crew .crew-container .crew-member-info h2 {
+  font-size: 56px;
+  font-family: "Bellefair", serif;
+}
+.bg-3 .crew .crew-container .crew-member-info p {
+  text-transform: capitalize;
+  color: #d0d6f9;
+  width: 444px;
+  line-height: 1.5rem;
+}
+.bg-3 .crew .crew-container .crew-member-info .dots {
+  height: 1rem;
+  width: 132px;
+  display: flex;
+  justify-content: space-between;
+}
+.bg-3 .crew .crew-container .crew-member-info .dots .dot {
+  height: inherit;
+  width: 1rem;
+  border-radius: 50%;
+  border: none;
+  background: gray;
+  opacity: 0.17;
+}
+.bg-3 .crew .crew-container .img-container {
+  height: 100%;
+  width: 568px;
+}
+.bg-3 .crew .crew-container .img-container img {
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
 .bg-2 {
   height: 100vh;
   background: url("/src/assets/destination/background-destination-desktop.jpg"), center/cover no-repeat;
