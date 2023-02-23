@@ -5,6 +5,7 @@ import marsImg from "../../../assets/destination/image-mars.png";
 import europaImg from "../../../assets/destination/image-europa.png";
 import titanImg from "../../../assets/destination/image-titan.png";
 import { useState, useRef } from "react";
+import Heading from "../../Heading";
 
 function Destination() {
   const [planet, setPlanet] = useState(0);
@@ -51,11 +52,16 @@ function Destination() {
   return (
     <div className="bg-2">
       <div className="main-container">
-        <div className="pick-destination">
+        {/* <div className="pick-destination">
           <h1>
             <span>01</span> pick your destination
-          </h1>
-        </div>
+          </h1> */}
+        <Heading
+          className={"pick-destination"}
+          number={"01"}
+          heading={"pick your destination"}
+        />
+        {/* </div> */}
         <div className="destination-container">
           <div className="planet-desc-container">
             <div className="planet-container">
