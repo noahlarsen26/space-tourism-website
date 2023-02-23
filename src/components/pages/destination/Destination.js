@@ -82,7 +82,7 @@ function Destination() {
                 </li>
                 <li onClick={setTitanHandler}>
                   <button>titan</button>
-                  {titanActive && <div div className="active"></div>}
+                  {titanActive && <div className="active"></div>}
                 </li>
               </ul>
               <Planet

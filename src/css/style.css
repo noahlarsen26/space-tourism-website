@@ -217,8 +217,12 @@ nav .navbar-container .navbar li:hover > #nav-underline {
   width: 1rem;
   border-radius: 50%;
   border: none;
-  background: gray;
+  background: white;
   opacity: 0.17;
+  cursor: pointer;
+}
+.bg-3 .crew .crew-container .crew-member-info .dots .dot:hover {
+  opacity: 0.5 !important;
 }
 .bg-3 .crew .crew-container .img-container {
   height: 100%;

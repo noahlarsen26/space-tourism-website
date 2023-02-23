@@ -7,7 +7,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   .crew {
-    // border: solid 1px red;
     position: absolute;
     bottom: 0;
     left: 10%;
@@ -17,14 +16,12 @@
     .heading-container {
       height: 34px;
       width: 50%;
-      // border: solid 1px orange;
       span {
         color: gray;
         padding-right: 4rem;
       }
     }
     .crew-container {
-      // border: solid 1px blue;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -32,29 +29,23 @@
       .crew-member-info {
         width: 50%;
         min-height: 300px;
-        // border: solid 1px green;
-        // height: inherit;
         display: flex;
         flex-direction: column;
         row-gap: 2rem;
-        // justify-content: space-around;
         h3 {
           font-size: $moderate-heading-size;
           color: gray;
           font-family: $secondary-font;
-          // border: solid 1px red;
         }
         h2 {
           font-size: $heading;
           font-family: $secondary-font;
-          // border: solid 1px blue;
         }
         p {
           text-transform: capitalize;
           color: $light-blue;
           width: 444px;
           line-height: 1.5rem;
-          // border: solid 1px purple;
         }
         .dots {
           height: 1rem;
@@ -66,8 +57,12 @@
             width: 1rem;
             border-radius: 50%;
             border: none;
-            background: gray;
+            background: white;
             opacity: 0.17;
+            cursor: pointer;
+          }
+          .dot:hover {
+            opacity: 0.5 !important;
           }
         }
       }
