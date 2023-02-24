@@ -1,0 +1,69 @@
+.bg-4 {
+  height: 100vh;
+  background-image: url("/src/assets/technology/background-technology-desktop.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .technology-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    // border: solid 1px red;
+    height: 35rem;
+    width: 100vw;
+    bottom: 0;
+    .tech-heading {
+      // border: solid 1px blue;
+      height: 34px;
+      width: 80%;
+      text-transform: uppercase;
+      span {
+        color: gray;
+        padding-right: 4rem;
+      }
+    }
+    .info-container {
+      border: solid 1px blue;
+      height: 80%;
+      width: 80%;
+      .info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        .btn-container {
+          border: solid 1px green;
+          height: 303px;
+          width: 80px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          button {
+            width: 100%;
+            height: 80px;
+            border-radius: 50%;
+            cursor: pointer;
+          }
+        }
+        article {
+          border: solid 1px orange;
+          width: 470px;
+          height: 303px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+        .img-container {
+          border: solid 1px purple;
+          width: 515px;
+          height: 100%;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
