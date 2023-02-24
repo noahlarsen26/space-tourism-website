@@ -384,7 +384,6 @@ nav .navbar-container .navbar li:hover > #nav-underline {
   padding-right: 4rem;
 }
 .bg-4 .technology-container .info-container {
-  border: solid 1px blue;
   height: 80%;
   width: 80%;
 }
@@ -395,7 +394,6 @@ nav .navbar-container .navbar li:hover > #nav-underline {
   height: 100%;
 }
 .bg-4 .technology-container .info-container .info .btn-container {
-  border: solid 1px green;
   height: 303px;
   width: 80px;
   display: flex;
@@ -409,15 +407,27 @@ nav .navbar-container .navbar li:hover > #nav-underline {
   cursor: pointer;
 }
 .bg-4 .technology-container .info-container .info article {
-  border: solid 1px orange;
   width: 470px;
   height: 303px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
+.bg-4 .technology-container .info-container .info article h3 {
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #d0d6f9;
+}
+.bg-4 .technology-container .info-container .info article h2 {
+  font-size: 3rem;
+  font-family: "Bellefair", serif;
+  text-transform: uppercase;
+}
+.bg-4 .technology-container .info-container .info article p {
+  font-size: 18px;
+  color: #d0d6f9;
+}
 .bg-4 .technology-container .info-container .info .img-container {
-  border: solid 1px purple;
   width: 515px;
   height: 100%;
 }

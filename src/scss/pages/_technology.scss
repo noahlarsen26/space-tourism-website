@@ -1,3 +1,5 @@
+@use "../abstracts" as *;
+
 .bg-4 {
   height: 100vh;
   background-image: url("/src/assets/technology/background-technology-desktop.jpg");
@@ -9,12 +11,10 @@
     flex-direction: column;
     align-items: flex-end;
     position: absolute;
-    // border: solid 1px red;
     height: 35rem;
     width: 100vw;
     bottom: 0;
     .tech-heading {
-      // border: solid 1px blue;
       height: 34px;
       width: 80%;
       text-transform: uppercase;
@@ -24,7 +24,6 @@
       }
     }
     .info-container {
-      border: solid 1px blue;
       height: 80%;
       width: 80%;
       .info {
@@ -33,7 +32,6 @@
         align-items: center;
         height: 100%;
         .btn-container {
-          border: solid 1px green;
           height: 303px;
           width: 80px;
           display: flex;
@@ -47,15 +45,28 @@
           }
         }
         article {
-          border: solid 1px orange;
           width: 470px;
           height: 303px;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
+          h3 {
+            text-transform: uppercase;
+            font-size: $sub-heading3-size;
+            color: $light-blue;
+          }
+          h2 {
+            font-size: 3rem;
+            font-family: $secondary-font;
+            text-transform: uppercase;
+            // border: solid 1px red;
+          }
+          p {
+            font-size: $body-size;
+            color: $light-blue;
+          }
         }
         .img-container {
-          border: solid 1px purple;
           width: 515px;
           height: 100%;
           img {
