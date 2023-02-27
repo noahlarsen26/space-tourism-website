@@ -358,6 +358,92 @@ nav .navbar-container .navbar li:hover > #nav-underline {
   font-size: 14px;
 }
 
+.bg-4 {
+  height: 100vh;
+  background-image: url("/src/assets/technology/background-technology-desktop.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg-4 .technology-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: absolute;
+  height: 35rem;
+  width: 100vw;
+  bottom: 0;
+}
+.bg-4 .technology-container .tech-heading {
+  height: 34px;
+  width: 80%;
+  text-transform: uppercase;
+}
+.bg-4 .technology-container .tech-heading span {
+  color: gray;
+  padding-right: 4rem;
+}
+.bg-4 .technology-container .info-container {
+  height: 80%;
+  width: 80%;
+}
+.bg-4 .technology-container .info-container .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.bg-4 .technology-container .info-container .info .btn-container {
+  height: 303px;
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.bg-4 .technology-container .info-container .info .btn-container button {
+  width: 100%;
+  height: 80px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: transparent;
+  border: solid 1px gray;
+  color: white;
+  font-size: 1.5rem;
+  transition: all 0.2s ease-in-out;
+}
+.bg-4 .technology-container .info-container .info .btn-container button:hover {
+  border: solid 1px white !important;
+}
+.bg-4 .technology-container .info-container .info article {
+  width: 470px;
+  height: 303px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.bg-4 .technology-container .info-container .info article h3 {
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #d0d6f9;
+}
+.bg-4 .technology-container .info-container .info article h2 {
+  font-size: 3rem;
+  font-family: "Bellefair", serif;
+  text-transform: uppercase;
+}
+.bg-4 .technology-container .info-container .info article p {
+  font-size: 18px;
+  color: #d0d6f9;
+}
+.bg-4 .technology-container .info-container .info .img-container {
+  width: 515px;
+  height: 100%;
+}
+.bg-4 .technology-container .info-container .info .img-container img {
+  width: 100%;
+  height: 100%;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
