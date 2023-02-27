@@ -406,14 +406,13 @@ nav .navbar-container .navbar li:hover > #nav-underline {
   border-radius: 50%;
   cursor: pointer;
   background: transparent;
-  border: solid 1px white;
+  border: solid 1px gray;
   color: white;
   font-size: 1.5rem;
   transition: all 0.2s ease-in-out;
 }
 .bg-4 .technology-container .info-container .info .btn-container button:hover {
-  background: white;
-  color: black;
+  border: solid 1px white !important;
 }
 .bg-4 .technology-container .info-container .info article {
   width: 470px;
