@@ -7,12 +7,36 @@ nav {
   height: 96px;
   width: 1385px;
   display: flex;
-  justify-content: flex-end;
-  .logo {
-    position: absolute;
-    top: 25%;
-    left: 0;
+  justify-content: space-between;
+  align-items: center;
+  @include respond-to("massive") {
+    width: 90%;
   }
+  .hamburger-btn {
+    position: absolute;
+    right: 0;
+    width: 3rem;
+    height: 50%;
+    display: none;
+    svg {
+      height: 100%;
+      width: 100%;
+      cursor: pointer;
+      color: $light-blue;
+    }
+    @include respond-to("medium") {
+      display: block;
+    }
+    @include respond-to("small") {
+      width: 2rem;
+      height: 30%;
+    }
+  }
+  // .logo {
+  //   @include respond-to("small") {
+
+  //   }
+  // }
   .underline {
     position: absolute;
     top: 50%;
@@ -23,6 +47,9 @@ nav {
     height: 1px;
     z-index: 3;
     opacity: 0.5;
+    @include respond-to("massive") {
+      display: none;
+    }
   }
   .navbar-container {
     display: flex;
@@ -31,6 +58,12 @@ nav {
     width: 830px;
     background: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(40.7742px);
+    @include respond-to("large") {
+      width: 700px;
+    }
+    @include respond-to("medium") {
+      display: none;
+    }
     .navbar {
       display: flex;
       justify-content: space-around;

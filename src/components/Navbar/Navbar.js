@@ -1,4 +1,6 @@
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 function Navbar() {
   return (
     <nav>
@@ -23,8 +25,10 @@ function Navbar() {
           <CustomLink title={"Destination"} number={"01"} to="Destination" />
           <CustomLink title={"Crew"} number={"02"} to="/Crew" />
           <CustomLink title={"Technology"} number={"03"} to="/Technology" />
-          <div></div>
         </ul>
+      </div>
+      <div className="hamburger-btn">
+        <FontAwesomeIcon icon={faBars} />
       </div>
     </nav>
   );
