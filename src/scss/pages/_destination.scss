@@ -15,15 +15,30 @@
     transform: translate(-50%, -40%);
     height: 550px;
     width: 1300px;
+    @include respond-to("huge") {
+      width: 90%;
+      height: 475px;
+    }
     .pick-destination {
       height: 34px;
       position: absolute;
       top: 0;
       left: 0;
       text-transform: uppercase;
+      @include respond-to("small") {
+        width: 90%;
+        font-size: 12px;
+        text-align: center;
+      }
+      @include respond-to("tiny") {
+        font-size: 10px;
+      }
       span {
         color: gray;
         padding-right: 4rem;
+        @include respond-to("small") {
+          padding-right: 0;
+        }
       }
     }
     .destination-container {
@@ -35,14 +50,35 @@
         display: flex;
         justify-content: space-around;
         width: 100%;
+        @include respond-to("substantial") {
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-end;
+          row-gap: 1.25rem;
+        }
         .planet-container {
           height: calc(100% - 34px);
+          @include respond-to("substantial") {
+            flex-direction: column;
+            height: 170px;
+            width: 170px;
+          }
           img {
             height: 100%;
           }
         }
         .planet-info {
           width: 500px;
+          @include respond-to("substantial") {
+            height: 50%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            row-gap: 0.5rem;
+          }
+          @include respond-to("small") {
+            width: 90%;
+          }
           ul {
             display: flex;
             list-style-type: none;
@@ -50,6 +86,9 @@
             height: 34px;
             justify-content: space-between;
             position: relative;
+            @include respond-to("substantial") {
+              margin: 0 auto;
+            }
             button {
               background: none;
               text-transform: uppercase;
@@ -59,6 +98,9 @@
               border: none;
               cursor: pointer;
               letter-spacing: 3px;
+              @include respond-to("substantial") {
+                font-size: 14px;
+              }
             }
             li {
               position: relative;
@@ -101,19 +143,31 @@
           font-size: $med-heading-size;
           font-family: $secondary-font;
           text-transform: uppercase;
+          @include respond-to("substantial") {
+            font-size: 40px;
+            height: auto;
+          }
         }
         .planet-description {
           padding-top: 2rem;
           padding-bottom: 2rem;
           color: $light-blue;
+          @include respond-to("substantial") {
+            padding-top: 0;
+            padding-bottom: 0;
+            font-size: 12px;
+          }
         }
         .facts-container {
-          position: absolute;
           display: flex;
           align-items: center;
           gap: 7rem;
           height: 61px;
           padding-top: 1.5rem;
+          @include respond-to("substantial") {
+            padding-top: 0;
+            justify-content: center;
+          }
           h3 {
             color: $light-blue;
             text-transform: uppercase;

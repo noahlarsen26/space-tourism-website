@@ -358,6 +358,12 @@ nav .navbar-container .navbar li:hover > #nav-underline {
   height: 550px;
   width: 1300px;
 }
+@media (max-width: 1300px) {
+  .bg-2 .main-container {
+    width: 90%;
+    height: 475px;
+  }
+}
 .bg-2 .main-container .pick-destination {
   height: 34px;
   position: absolute;
@@ -365,9 +371,26 @@ nav .navbar-container .navbar li:hover > #nav-underline {
   left: 0;
   text-transform: uppercase;
 }
+@media (max-width: 500px) {
+  .bg-2 .main-container .pick-destination {
+    width: 90%;
+    font-size: 12px;
+    text-align: center;
+  }
+}
+@media (max-width: 360px) {
+  .bg-2 .main-container .pick-destination {
+    font-size: 10px;
+  }
+}
 .bg-2 .main-container .pick-destination span {
   color: gray;
   padding-right: 4rem;
+}
+@media (max-width: 500px) {
+  .bg-2 .main-container .pick-destination span {
+    padding-right: 0;
+  }
 }
 .bg-2 .main-container .destination-container {
   display: flex;
@@ -380,14 +403,43 @@ nav .navbar-container .navbar li:hover > #nav-underline {
   justify-content: space-around;
   width: 100%;
 }
+@media (max-width: 1300px) {
+  .bg-2 .main-container .destination-container .planet-desc-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    row-gap: 1.25rem;
+  }
+}
 .bg-2 .main-container .destination-container .planet-desc-container .planet-container {
   height: calc(100% - 34px);
+}
+@media (max-width: 1300px) {
+  .bg-2 .main-container .destination-container .planet-desc-container .planet-container {
+    flex-direction: column;
+    height: 170px;
+    width: 170px;
+  }
 }
 .bg-2 .main-container .destination-container .planet-desc-container .planet-container img {
   height: 100%;
 }
 .bg-2 .main-container .destination-container .planet-desc-container .planet-info {
   width: 500px;
+}
+@media (max-width: 1300px) {
+  .bg-2 .main-container .destination-container .planet-desc-container .planet-info {
+    height: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+  }
+}
+@media (max-width: 500px) {
+  .bg-2 .main-container .destination-container .planet-desc-container .planet-info {
+    width: 90%;
+  }
 }
 .bg-2 .main-container .destination-container .planet-desc-container .planet-info ul {
   display: flex;
@@ -396,6 +448,11 @@ nav .navbar-container .navbar li:hover > #nav-underline {
   height: 34px;
   justify-content: space-between;
   position: relative;
+}
+@media (max-width: 1300px) {
+  .bg-2 .main-container .destination-container .planet-desc-container .planet-info ul {
+    margin: 0 auto;
+  }
 }
 .bg-2 .main-container .destination-container .planet-desc-container .planet-info ul button {
   background: none;
@@ -406,6 +463,11 @@ nav .navbar-container .navbar li:hover > #nav-underline {
   border: none;
   cursor: pointer;
   letter-spacing: 3px;
+}
+@media (max-width: 1300px) {
+  .bg-2 .main-container .destination-container .planet-desc-container .planet-info ul button {
+    font-size: 14px;
+  }
 }
 .bg-2 .main-container .destination-container .planet-desc-container .planet-info ul li {
   position: relative;
@@ -447,18 +509,36 @@ nav .navbar-container .navbar li:hover > #nav-underline {
   font-family: "Bellefair", serif;
   text-transform: uppercase;
 }
+@media (max-width: 1300px) {
+  .bg-2 .main-container .destination-container .planet-desc-container .planet-name {
+    font-size: 40px;
+    height: auto;
+  }
+}
 .bg-2 .main-container .destination-container .planet-desc-container .planet-description {
   padding-top: 2rem;
   padding-bottom: 2rem;
   color: #d0d6f9;
 }
+@media (max-width: 1300px) {
+  .bg-2 .main-container .destination-container .planet-desc-container .planet-description {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 12px;
+  }
+}
 .bg-2 .main-container .destination-container .planet-desc-container .facts-container {
-  position: absolute;
   display: flex;
   align-items: center;
   gap: 7rem;
   height: 61px;
   padding-top: 1.5rem;
+}
+@media (max-width: 1300px) {
+  .bg-2 .main-container .destination-container .planet-desc-container .facts-container {
+    padding-top: 0;
+    justify-content: center;
+  }
 }
 .bg-2 .main-container .destination-container .planet-desc-container .facts-container h3 {
   color: #d0d6f9;
