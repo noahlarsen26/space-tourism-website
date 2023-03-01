@@ -29,7 +29,7 @@ nav .hamburger-btn svg {
   cursor: pointer;
   color: #d0d6f9;
 }
-@media (max-width: 850px) {
+@media (max-width: 875px) {
   nav .hamburger-btn {
     display: block;
   }
@@ -69,7 +69,7 @@ nav .navbar-container {
     width: 700px;
   }
 }
-@media (max-width: 850px) {
+@media (max-width: 875px) {
   nav .navbar-container {
     display: none;
   }
@@ -278,41 +278,108 @@ nav .navbar-container .navbar li:hover > #nav-underline {
   width: 1200px;
   text-transform: uppercase;
 }
-.bg-3 .crew .heading-container {
-  height: 34px;
-  width: 50%;
-}
-.bg-3 .crew .heading-container span {
-  color: gray;
-  padding-right: 4rem;
+@media (max-width: 1300px) {
+  .bg-3 .crew {
+    width: 90%;
+  }
 }
 .bg-3 .crew .crew-container {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: calc(100% - 39px);
+  height: 100%;
+}
+@media (max-width: 875px) {
+  .bg-3 .crew .crew-container {
+    justify-content: flex-start;
+    row-gap: 1rem;
+  }
+}
+.bg-3 .crew .crew-container .heading-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 34px;
+  width: 50%;
+}
+@media (max-width: 875px) {
+  .bg-3 .crew .crew-container .heading-container {
+    width: 100%;
+  }
+}
+.bg-3 .crew .crew-container .heading-container span {
+  color: gray;
+  padding-right: 4rem;
+}
+@media (max-width: 380px) {
+  .bg-3 .crew .crew-container .heading-container span {
+    padding-right: 0;
+  }
+}
+@media (max-width: 875px) {
+  .bg-3 .crew .crew-container {
+    flex-direction: column-reverse;
+  }
 }
 .bg-3 .crew .crew-container .crew-member-info {
   width: 50%;
-  min-height: 300px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   row-gap: 2rem;
+}
+@media (max-width: 875px) {
+  .bg-3 .crew .crew-container .crew-member-info {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+    height: 200px;
+    width: 90%;
+  }
+}
+.bg-3 .crew .crew-container .crew-member-info article {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 2rem);
+  justify-content: space-between;
+}
+@media (max-width: 875px) {
+  .bg-3 .crew .crew-container .crew-member-info article {
+    align-items: center;
+    text-align: center;
+  }
 }
 .bg-3 .crew .crew-container .crew-member-info h3 {
   font-size: 32px;
   color: gray;
   font-family: "Bellefair", serif;
 }
+@media (max-width: 875px) {
+  .bg-3 .crew .crew-container .crew-member-info h3 {
+    font-size: 14px;
+  }
+}
 .bg-3 .crew .crew-container .crew-member-info h2 {
   font-size: 56px;
   font-family: "Bellefair", serif;
+}
+@media (max-width: 875px) {
+  .bg-3 .crew .crew-container .crew-member-info h2 {
+    font-size: 24px;
+  }
 }
 .bg-3 .crew .crew-container .crew-member-info p {
   text-transform: capitalize;
   color: #d0d6f9;
   width: 444px;
   line-height: 1.5rem;
+}
+@media (max-width: 875px) {
+  .bg-3 .crew .crew-container .crew-member-info p {
+    font-size: 14px;
+    width: 100%;
+  }
 }
 .bg-3 .crew .crew-container .crew-member-info .dots {
   height: 1rem;
@@ -329,17 +396,58 @@ nav .navbar-container .navbar li:hover > #nav-underline {
   opacity: 0.17;
   cursor: pointer;
 }
+@media (max-width: 875px) {
+  .bg-3 .crew .crew-container .crew-member-info .dots .dot {
+    width: 12px;
+    height: 12px;
+  }
+}
 .bg-3 .crew .crew-container .crew-member-info .dots .dot:hover {
   opacity: 0.5 !important;
 }
 .bg-3 .crew .crew-container .img-container {
   height: 100%;
   width: 568px;
+  align-self: end;
+}
+@media (max-width: 1100px) {
+  .bg-3 .crew .crew-container .img-container {
+    width: 450px;
+    height: 90%;
+  }
+}
+@media (max-width: 1000px) {
+  .bg-3 .crew .crew-container .img-container {
+    width: 400px;
+    height: 80%;
+  }
+}
+@media (max-width: 875px) {
+  .bg-3 .crew .crew-container .img-container {
+    width: 250px;
+    height: 290px;
+    align-self: center;
+  }
 }
 .bg-3 .crew .crew-container .img-container img {
   height: 100%;
   display: block;
   margin: 0 auto;
+}
+@media (max-width: 1100px) {
+  .bg-3 .crew .crew-container .img-container img {
+    width: inherit;
+  }
+}
+@media (max-width: 875px) {
+  .bg-3 .crew .crew-container .img-container .line-container {
+    height: 1px;
+  }
+  .bg-3 .crew .crew-container .img-container .line-container div {
+    height: inherit;
+    background: #ffffff;
+    opacity: 0.5;
+  }
 }
 
 .bg-2 {
@@ -378,7 +486,7 @@ nav .navbar-container .navbar li:hover > #nav-underline {
     text-align: center;
   }
 }
-@media (max-width: 360px) {
+@media (max-width: 380px) {
   .bg-2 .main-container .pick-destination {
     font-size: 10px;
   }

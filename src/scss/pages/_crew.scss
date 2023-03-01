@@ -13,39 +13,86 @@
     height: 550px;
     width: 1200px;
     text-transform: uppercase;
-    .heading-container {
-      height: 34px;
-      width: 50%;
-      span {
-        color: gray;
-        padding-right: 4rem;
-      }
+    @include respond-to("huge") {
+      width: 90%;
     }
     .crew-container {
+      position: relative;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: calc(100% - 39px);
+      height: 100%;
+      @include respond-to("medium") {
+        justify-content: flex-start;
+        row-gap: 1rem;
+      }
+      .heading-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 34px;
+        width: 50%;
+        @include respond-to("medium") {
+          width: 100%;
+        }
+        span {
+          color: gray;
+          padding-right: 4rem;
+          @include respond-to("tiny") {
+            padding-right: 0;
+          }
+        }
+      }
+      @include respond-to("medium") {
+        flex-direction: column-reverse;
+      }
       .crew-member-info {
         width: 50%;
-        min-height: 300px;
+        height: 300px;
         display: flex;
         flex-direction: column;
         row-gap: 2rem;
+        @include respond-to("medium") {
+          flex-direction: column-reverse;
+          justify-content: space-between;
+          align-items: center;
+          height: 200px;
+          width: 90%;
+        }
+        article {
+          display: flex;
+          flex-direction: column;
+          height: calc(100% - 2rem);
+          justify-content: space-between;
+          @include respond-to("medium") {
+            align-items: center;
+            text-align: center;
+          }
+        }
         h3 {
           font-size: $moderate-heading-size;
           color: gray;
           font-family: $secondary-font;
+          @include respond-to("medium") {
+            font-size: 14px;
+          }
         }
         h2 {
           font-size: $heading;
           font-family: $secondary-font;
+          @include respond-to("medium") {
+            font-size: 24px;
+          }
         }
         p {
           text-transform: capitalize;
           color: $light-blue;
           width: 444px;
           line-height: 1.5rem;
+          @include respond-to("medium") {
+            font-size: 14px;
+            width: 100%;
+          }
         }
         .dots {
           height: 1rem;
@@ -60,6 +107,10 @@
             background: white;
             opacity: 0.17;
             cursor: pointer;
+            @include respond-to("medium") {
+              width: 12px;
+              height: 12px;
+            }
           }
           .dot:hover {
             opacity: 0.5 !important;
@@ -69,11 +120,37 @@
       .img-container {
         height: 100%;
         width: 568px;
-        // border: solid 1px green;
+        align-self: end;
+        @include respond-to("in-charge") {
+          width: 450px;
+          height: 90%;
+        }
+        @include respond-to("large") {
+          width: 400px;
+          height: 80%;
+        }
+        @include respond-to("medium") {
+          width: 250px;
+          height: 290px;
+          align-self: center;
+        }
         img {
           height: 100%;
           display: block;
           margin: 0 auto;
+          @include respond-to("in-charge") {
+            width: inherit;
+          }
+        }
+        @include respond-to("medium") {
+          .line-container {
+            height: 1px;
+            div {
+              height: inherit;
+              background: $light-color;
+              opacity: 0.5;
+            }
+          }
         }
       }
     }

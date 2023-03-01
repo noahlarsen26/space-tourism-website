@@ -6,6 +6,7 @@ import secondImg from "../../../assets/crew/image-mark-shuttleworth.png";
 import thirdImg from "../../../assets/crew/image-victor-glover.png";
 import fourthImg from "../../../assets/crew/image-anousheh-ansari.png";
 import data from "../../../data.json";
+import Heading from "../../Heading";
 
 function CrewInfo() {
   const imgRef = useRef();
@@ -30,10 +31,17 @@ function CrewInfo() {
 
   return (
     <div className="crew-container">
+      <Heading
+        className={"heading-container"}
+        number={"02"}
+        heading={"meet your crew"}
+      />
       <div className="crew-member-info">
-        <h3>{data.crew[crew].role}</h3>
-        <h2>{data.crew[crew].name}</h2>
-        <p>{data.crew[crew].bio}</p>
+        <article>
+          <h3>{data.crew[crew].role}</h3>
+          <h2>{data.crew[crew].name}</h2>
+          <p>{data.crew[crew].bio}</p>
+        </article>
         <div className="dots">
           <Dot onClick={setFirstCrewHandler} isActive={crew === 0} />
           <Dot onClick={setSecondCrewHandler} isActive={crew === 1} />
@@ -43,6 +51,9 @@ function CrewInfo() {
       </div>
       <div className="img-container">
         <img ref={imgRef} src={firstImg} alt="crew-member-image" />
+        <div className="line-container">
+          <div></div>
+        </div>
       </div>
     </div>
   );
