@@ -22,6 +22,7 @@ function Technology() {
     setTech(2);
     imgRef.current.src = thirdImg;
   }
+  // console.log(imgRef.current.style[0]);
 
   return (
     <div className="bg-4">
@@ -33,30 +34,42 @@ function Technology() {
         />
         <div className="info-container">
           <div className="info">
-            <div className="btn-container">
-              <TechButton
-                onClick={setTechHandler1}
-                number={"1"}
-                isActive={tech === 0}
-              />
-              <TechButton
-                onClick={setTechHandler2}
-                number={"2"}
-                isActive={tech === 1}
-              />
-              <TechButton
-                onClick={setTechHandler3}
-                number={"3"}
-                isActive={tech === 2}
-              />
+            <div className="tech-info">
+              <div className="btn-container">
+                <TechButton
+                  onClick={setTechHandler1}
+                  number={"1"}
+                  isActive={tech === 0}
+                />
+                <TechButton
+                  onClick={setTechHandler2}
+                  number={"2"}
+                  isActive={tech === 1}
+                />
+                <TechButton
+                  onClick={setTechHandler3}
+                  number={"3"}
+                  isActive={tech === 2}
+                />
+              </div>
+              <article>
+                <h3>the terminology...</h3>
+                <h2>{data.technology[tech].name}</h2>
+                <p>{data.technology[tech].description}</p>
+              </article>
             </div>
-            <article>
-              <h3>the terminology...</h3>
-              <h2>{data.technology[tech].name}</h2>
-              <p>{data.technology[tech].description}</p>
-            </article>
             <div className="img-container">
               <img ref={imgRef} src={firstImg} alt="" />
+              {/* <div
+                style={{
+                  backgroundImage: `url(${firstImg})`,
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
+                  backgroundSize: "cover",
+                }}
+                ref={imgRef}
+                className="img"
+              ></div> */}
             </div>
           </div>
         </div>

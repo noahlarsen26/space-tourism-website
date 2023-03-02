@@ -14,6 +14,9 @@
     height: 35rem;
     width: 100vw;
     bottom: 0;
+    @include respond-to("huge") {
+      height: 30rem;
+    }
     .tech-heading {
       height: 34px;
       width: 80%;
@@ -21,23 +24,62 @@
       span {
         color: gray;
         padding-right: 4rem;
+        @include respond-to("tiny") {
+          padding-right: 0;
+        }
+      }
+      @include respond-to("large") {
+        width: 100%;
+        text-align: center;
       }
     }
     .info-container {
       height: 80%;
       width: 80%;
+      @include respond-to("large") {
+        height: calc(100% - 34px - 1rem);
+        position: relative;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+      }
       .info {
         display: flex;
         justify-content: space-between;
         align-items: center;
         height: 100%;
+        @include respond-to("large") {
+          flex-direction: column-reverse;
+          height: 50%;
+          justify-content: flex-end;
+        }
+        .tech-info {
+          display: flex;
+          @include respond-to("large") {
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+          }
+          @include respond-to("moderate") {
+            width: 100%;
+          }
+        }
         .btn-container {
           height: 303px;
           width: 80px;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
+          margin-right: 1rem;
+          @include respond-to("large") {
+            flex-direction: row;
+            height: 100px;
+            width: 50%;
+            align-items: center;
+          }
           button {
+            position: relative;
             width: 100%;
             height: 80px;
             border-radius: 50%;
@@ -47,6 +89,16 @@
             color: white;
             font-size: 1.5rem;
             transition: all 0.2s ease-in-out;
+            @include respond-to("large") {
+              height: 55px;
+              width: 55px;
+              font-size: 1rem;
+              margin-top: 0.5rem;
+            }
+            @include respond-to("small") {
+              height: 45px;
+              width: 45px;
+            }
           }
           button:hover {
             border: solid 1px white !important;
@@ -58,25 +110,58 @@
           display: flex;
           flex-direction: column;
           justify-content: space-between;
+          @include respond-to("large") {
+            text-align: center;
+            width: 100%;
+            margin-top: 1rem;
+          }
           h3 {
             text-transform: uppercase;
             font-size: $sub-heading3-size;
             color: $light-blue;
+            @include respond-to("large") {
+              font-size: 14px;
+            }
+            @include respond-to("modest") {
+              font-size: 12px;
+            }
           }
           h2 {
             font-size: 3rem;
             font-family: $secondary-font;
             text-transform: uppercase;
-            // border: solid 1px red;
+            @include respond-to("large") {
+              font-size: 2rem;
+            }
+            @include respond-to("modest") {
+              font-size: 1.5rem;
+            }
           }
           p {
             font-size: $body-size;
             color: $light-blue;
+            @include respond-to("large") {
+              font-size: 15px;
+            }
+            @include respond-to("modest") {
+              font-size: 12px;
+            }
           }
         }
         .img-container {
           width: 515px;
           height: 100%;
+          @include respond-to("in-charge") {
+            width: 400px;
+          }
+          @include respond-to("large") {
+            width: 250px;
+            height: 200px;
+          }
+          @include respond-to("modest") {
+            width: 225px;
+            height: 175px;
+          }
           img {
             width: 100%;
             height: 100%;
