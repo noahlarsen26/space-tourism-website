@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router-dom";
+
 function Home() {
+  const navigate = useNavigate();
   return (
     <div className="bg-1">
       <div className="hero-container">
@@ -13,7 +16,7 @@ function Home() {
           </p>
         </article>
         <div className="circle-container">
-          <button className="circle">
+          <button onClick={() => navigate("/Destination")} className="circle">
             <h5>explore</h5>
           </button>
           <div></div>
