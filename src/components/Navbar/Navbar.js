@@ -1,9 +1,9 @@
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-function Navbar() {
+function Navbar({ onClick }) {
   return (
-    <nav>
+    <nav className="nav">
       <svg
         className="logo"
         xmlns="http://www.w3.org/2000/svg"
@@ -27,16 +27,16 @@ function Navbar() {
           <CustomLink title={"Technology"} number={"03"} to="/Technology" />
         </ul>
       </div>
-      <div className="hamburger-btn">
+      <button onClick={onClick} className="hamburger-btn">
         <FontAwesomeIcon icon={faBars} />
-      </div>
+      </button>
     </nav>
   );
 }
 
 export default Navbar;
 
-function CustomLink({ to, ...props }) {
+export function CustomLink({ to, ...props }) {
   const resolvePath = useResolvedPath(to);
   const isActive = useMatch({ path: resolvePath.pathname, end: true });
   return (

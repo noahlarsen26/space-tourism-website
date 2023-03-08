@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
-nav {
+.nav {
   margin-top: 40px;
   position: relative;
   position: absolute;
@@ -12,35 +12,37 @@ nav {
   align-items: center;
 }
 @media (max-width: 1400px) {
-  nav {
+  .nav {
     width: 90%;
   }
 }
-nav .hamburger-btn {
+.nav .hamburger-btn {
   position: absolute;
   right: 0;
   width: 3rem;
   height: 50%;
+  background: none;
+  border: none;
   display: none;
 }
-nav .hamburger-btn svg {
+.nav .hamburger-btn svg {
   height: 100%;
   width: 100%;
   cursor: pointer;
   color: #d0d6f9;
 }
 @media (max-width: 875px) {
-  nav .hamburger-btn {
+  .nav .hamburger-btn {
     display: block;
   }
 }
 @media (max-width: 500px) {
-  nav .hamburger-btn {
+  .nav .hamburger-btn {
     width: 2rem;
     height: 30%;
   }
 }
-nav .underline {
+.nav .underline {
   position: absolute;
   top: 50%;
   left: 25%;
@@ -52,11 +54,11 @@ nav .underline {
   opacity: 0.5;
 }
 @media (max-width: 1400px) {
-  nav .underline {
+  .nav .underline {
     display: none;
   }
 }
-nav .navbar-container {
+.nav .navbar-container {
   display: flex;
   align-items: center;
   height: 100%;
@@ -65,16 +67,16 @@ nav .navbar-container {
   backdrop-filter: blur(40.7742px);
 }
 @media (max-width: 1000px) {
-  nav .navbar-container {
+  .nav .navbar-container {
     width: 700px;
   }
 }
 @media (max-width: 875px) {
-  nav .navbar-container {
+  .nav .navbar-container {
     display: none;
   }
 }
-nav .navbar-container .navbar {
+.nav .navbar-container .navbar {
   display: flex;
   justify-content: space-around;
   list-style-type: none;
@@ -82,18 +84,18 @@ nav .navbar-container .navbar {
   width: 100%;
   text-transform: uppercase;
 }
-nav .navbar-container .navbar li {
+.nav .navbar-container .navbar li {
   position: relative;
   display: flex;
   align-items: center;
   height: 100%;
   cursor: pointer;
 }
-nav .navbar-container .navbar li a {
+.nav .navbar-container .navbar li a {
   color: #ffffff;
   text-decoration: none;
 }
-nav .navbar-container .navbar li .active {
+.nav .navbar-container .navbar li .active {
   position: absolute;
   top: 100%;
   height: 3px;
@@ -101,10 +103,10 @@ nav .navbar-container .navbar li .active {
   display: inline-block;
   background: #ffffff;
 }
-nav .navbar-container .navbar li span {
+.nav .navbar-container .navbar li span {
   font-weight: 700;
 }
-nav .navbar-container .navbar li:hover > #nav-underline {
+.nav .navbar-container .navbar li:hover > #nav-underline {
   position: absolute;
   top: 100%;
   height: 3px;
@@ -112,6 +114,58 @@ nav .navbar-container .navbar li:hover > #nav-underline {
   display: inline-block;
   background: #ffffff;
   opacity: 0.5;
+}
+
+aside {
+  height: 100vh;
+  width: 50vw;
+  position: relative;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(40.7742px);
+}
+aside .side-nav {
+  width: 90%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+aside .side-nav .close-side {
+  height: 3rem;
+  width: 50px;
+  align-self: flex-end;
+  display: flex;
+  justify-content: center;
+}
+aside .side-nav .close-side button {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #d0d6f9;
+  cursor: pointer;
+}
+aside .side-nav .close-side button li {
+  z-index: 98;
+  position: absolute;
+}
+aside .side-nav ul {
+  height: 50vh;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+aside .side-nav ul li span {
+  font-weight: 700;
+}
+aside .side-nav ul a {
+  text-decoration: none;
+  color: #ffffff;
 }
 
 .bg-1 {

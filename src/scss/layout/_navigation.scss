@@ -1,5 +1,5 @@
 @use "../abstracts" as *;
-nav {
+.nav {
   margin-top: 40px;
   position: relative;
   position: absolute;
@@ -17,6 +17,8 @@ nav {
     right: 0;
     width: 3rem;
     height: 50%;
+    background: none;
+    border: none;
     display: none;
     svg {
       height: 100%;
@@ -32,11 +34,6 @@ nav {
       height: 30%;
     }
   }
-  // .logo {
-  //   @include respond-to("small") {
-
-  //   }
-  // }
   .underline {
     position: absolute;
     top: 50%;
