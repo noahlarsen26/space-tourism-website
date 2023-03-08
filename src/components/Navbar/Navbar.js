@@ -1,10 +1,13 @@
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 function Navbar({ onClick }) {
+  const navigate = useNavigate();
   return (
     <nav className="nav">
       <svg
+        onClick={() => navigate("/")}
         className="logo"
         xmlns="http://www.w3.org/2000/svg"
         width="48"

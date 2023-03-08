@@ -25,12 +25,6 @@
   border: none;
   display: none;
 }
-.nav .hamburger-btn svg {
-  height: 100%;
-  width: 100%;
-  cursor: pointer;
-  color: #d0d6f9;
-}
 @media (max-width: 875px) {
   .nav .hamburger-btn {
     display: block;
@@ -115,6 +109,9 @@
   background: #ffffff;
   opacity: 0.5;
 }
+.nav svg {
+  cursor: pointer;
+}
 
 aside {
   height: 100vh;
@@ -148,10 +145,6 @@ aside .side-nav .close-side button {
   font-size: 2rem;
   color: #d0d6f9;
   cursor: pointer;
-}
-aside .side-nav .close-side button li {
-  z-index: 98;
-  position: absolute;
 }
 aside .side-nav ul {
   height: 50vh;
